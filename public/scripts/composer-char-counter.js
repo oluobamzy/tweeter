@@ -3,14 +3,14 @@ $(document).ready(function() {
   console.log("I AM READY TO ACCEPT INPUT");
    $('#tweet-text').on('input',function(event){
     const changingLength = $(this).val().length;
-    const maxLength = 140;
+    const maxLength = 10;
     const count = maxLength - changingLength;
-    $("#counterId").text(count);
+    $(".counter").text(count);
     if(count < 0){
-      $("#counterId").addClass('above');
+      $(".counter").addClass('above');
     }
     else{
-      $("#counterId").removeClass('above');
+      $(".counter").removeClass('above');
     }
    });
    $(".fa-solid").addClass('hover-effect');

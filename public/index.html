@@ -55,29 +55,10 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="bt-output">
             <button type="submit">Tweet</button>
-            <div name="counter" id="counterId" class="counter above" for="tweet-text">140</div>
+            <div name="counter"  class="counter" for="tweet-text">140</div>
           </div>
         </form>
-        <article>
-          <header class="tweets-header">
-               <div class="profile-area">
-                <i class="fa-regular fa-user"></i>
-               <p>Newton</p>
-               </div>
-               <p>@userName</p>
-          </header>
-           <p class="display-text">I am what i am today because i have seen it all...</p>
-           <span class='line'></span>
-          <footer class="tweets-footer">
-             <p>10 days ago</p>
-             <div class="icons-footer">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-             </div>
-
-          </footer>
-        </article>
+        <article id="loaded-articles"></article>
       </section>
     </main>
   </body>
