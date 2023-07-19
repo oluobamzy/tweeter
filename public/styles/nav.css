@@ -1,0 +1,26 @@
+
+nav{
+  font-family: 'Bungee', sans-serif;
+  padding: 30px 1.5em 1.5em 10px;
+  background-color:#4056A1;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color:#FFFFFF;
+  height: 120px;
+  width:100%;
+  position: fixed;
+  margin-top: 0;
+}
+nav p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+.nav-img{
+  display: inline;
+  text-align: center;
+
+}
+i{
+  justify-self: center;
+}

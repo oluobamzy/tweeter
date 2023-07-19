@@ -13,12 +13,27 @@ html {
 /*
  * Global layout stuff
  */
-
+html{
+  margin: 0;
+}
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
+  margin:0;
+  
+  
 }
+main{
+  width:90vw;
+  height:500px;
+  color:#545149;
+  margin: 20px auto;
+}
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

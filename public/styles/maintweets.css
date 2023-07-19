@@ -1,0 +1,57 @@
+article{
+  display:flex;
+  flex-direction: column;
+  margin-top: 60px;
+  border:4px solid black;
+  transition: box-shadow 0.3s ease-in-out;
+}
+article:hover{
+  box-shadow: 0 5px 10px rgba(236, 9, 9, 0.5);
+}
+.tweets-header{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px auto;
+}
+.profile-area{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.profile-area p{
+  margin-right: 40px;
+}
+.display-text{
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align:start;
+  margin-left: 50px;
+}
+.line {
+  display: inline-block;
+  width: 96%;
+  border-top: 5px solid rgb(9, 8, 8);
+  margin: auto;
+}
+.tweets-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: small;
+  margin: 0 40px auto;
+}
+.fa-solid{
+  color:#4056A1;
+
+}
+.hover-effect {
+  color:#4056A1;  /* Initial color */
+}
+.hover-effect:hover {
+  color: rgba(197, 229, 14, 0.999);
+  /* Color on hover */
+}

@@ -1,0 +1,16 @@
+#site-header{
+  
+  height:520px;
+  width:100%;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(179, 112, 23);
+  background-image:url('../images/3px-tile.png');
+  
+  
+}
+#site-header img{
+  max-width: 100%;
+  padding:140px 0 0 0;
+}
