@@ -4,49 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(function() {
-  const users = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1689602744781
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1689689144781
-    }
-  ];
-
-  function timeAgo(timestamp) {
-    // Convert timestamp to time ago format (e.g., "10 days ago")
-    // You can implement this function or use a library like moment.js
-    // Here's a simple example:
-    const now = Date.now();
-    const timeDiff = now - timestamp;
-    const daysAgo = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    return daysAgo + " days ago";
-  };
-
-
 
   const renderTweets = (tweets) => {
     const $tweetsContainer = $('#loaded-articles');
 
     tweets.forEach((tweetData) => {
       const $tweetElement = createTweetElement(tweetData);
-      $tweetsContainer.append($tweetElement);
+      $tweetsContainer.prepend($tweetElement);
     });
   };
 
@@ -62,7 +26,7 @@ $(function() {
     <p class="display-text">${obj.content.text}</p>
      <span class='line'></span>
     <footer class="tweets-footer">
-    <p>${timeAgo(obj.created_at)}</p>
+    <p>${timeago.format(obj.created_at)}</p>
        <div class="icons-footer">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -76,8 +40,57 @@ $(function() {
     return tweet;
   };
 
+  $("#myform").on('submit',function(event){
+    event.preventDefault();
+   // console.log(this);
+    const formData = $(this).serialize();
+    let $counter = parseInt($('.counter').text());
+    if ($counter < 0) {
+      alert("Only 140 characters are allowed❌❌❌");
+      return false; // Prevent form submission if count is negative.
+    }
+    
+    if ($counter === 140) {
+      alert("Empty input");
+      return false; // Prevent form submission if count is exactly 140.
+    }
 
-  renderTweets(users);
+    $.ajax({
+      url: '/tweets', 
+      type: 'POST',
+      data: formData,
+      success: function(response) {
+        // Handle the server response here
+        console.log(response);
+      },
+      error: function(error) {
+        // Handle errors here
+        console.error(error);
+      }
+    });
+  });
+
+
+  const loadTweets = ()=>{
+    const url = "/tweets";
+
+   $.ajax({
+    url: url,
+    type: "GET",
+    success: function(response){
+      //handle response
+      renderTweets(response);
+    },
+    error: function(xhr,status,error){
+        console.log(error);
+    }
+
+
+   })
+  
+  }
+  loadTweets();
+
 })
 
 

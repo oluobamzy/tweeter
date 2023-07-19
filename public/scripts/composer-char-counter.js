@@ -3,7 +3,7 @@ $(document).ready(function() {
   console.log("I AM READY TO ACCEPT INPUT");
    $('#tweet-text').on('input',function(event){
     const changingLength = $(this).val().length;
-    const maxLength = 10;
+    const maxLength = 140;
     const count = maxLength - changingLength;
     $(".counter").text(count);
     if(count < 0){
