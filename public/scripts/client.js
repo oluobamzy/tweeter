@@ -29,7 +29,7 @@ $(function() {
         <div class="icons-footer">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart">1</i>
         </div>
       </footer>
     </article>`);
