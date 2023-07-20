@@ -18,10 +18,11 @@ label{
   width:100%;
   padding:0.5rem;
   margin-bottom: 1rem;
-  height:0.5em;
+  height:2em;
   background-color:#f4f1ec ;
-  outline-style: none;
-  border-bottom: 4px solid black;
+  outline: none;
+  border:none;
+ border-bottom: 4px solid black;
  
 }
 .bt-output{
@@ -37,4 +38,12 @@ button{
 .above{
   color: rgb(243, 7, 7);
   font-weight:bolder;
+}
+.error-message{
+  display:none;
+  padding: 10px;
+  background-color: #f44336; /* Red background color for error message */
+  color: white; /* Text color for the error message */
+  font-size: 16px;
+  font-weight: bold;
 }

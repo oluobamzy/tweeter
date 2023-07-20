@@ -31,9 +31,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="tweeter-span">tweeter</span>
       <div class="nav-img">
-        <span><p><em>Write</em> a new Tweet</p></span>
+        <span><p><b>Write</b> a new Tweet</p></span>
         <span><i class="fa-solid fa-angles-down" style="color: #cf2917;"></i></span>
       </div>
     </nav>
@@ -54,6 +54,9 @@
         <form action="/tweets/" method="post" id="myform">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
+          <div class="error-message">
+            Oops! Only 140 characters are allowed❌❌❌ and Empty input ❌allowed
+          </div>
           <div class="bt-output">
             <button type="submit" id="btn-submit">Tweet</button>
             <div name="counter"  class="counter" for="tweet-text">140</div>
