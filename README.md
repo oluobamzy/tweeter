@@ -45,3 +45,6 @@ Tweeter aims to replicate some of the core features of Twitter while keeping it 
 4. Modular Programming: The codebase is structured into modular components to improve code organization and maintainability.
 5. Front-end Design: While the focus is on functionality rather than aesthetics, basic CSS styling was applied for a pleasant user experience.
 
+## Screenshots
+["A screenshot of the Desktop screen size supporting sizes above 1024px"]("https://github.com/oluobamzy/tweeter/blob/e7da6afc8fed2b0913452659d5ec8d1095e0331a/Docs/Desktop-screen-sized%20view.png")
+["Error message screen for input limit"]("https://github.com/oluobamzy/tweeter/blob/e7da6afc8fed2b0913452659d5ec8d1095e0331a/Docs/Error-message%20screen%20for%20exceeding%20input%20limit.png")

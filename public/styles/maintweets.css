@@ -1,4 +1,4 @@
-article {
+  article {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
@@ -68,4 +68,4 @@ article:hover {
 .fa-solid:hover {
   color: rgba(197, 229, 14, 0.999);
   /* Color on hover */
-}
+} 
