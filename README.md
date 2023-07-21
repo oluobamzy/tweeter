@@ -46,6 +46,6 @@ Tweeter aims to replicate some of the core features of Twitter while keeping it 
 5. Front-end Design: While the focus is on functionality rather than aesthetics, basic CSS styling was applied for a pleasant user experience.
 
 ## Screenshots
-["A screenshot of the Desktop screen size supporting sizes above 1024px"](Docs/Desktop-screen-sized view.png)
-["Error message screen for input limit"](Docs/Error-message screen for exceeding input limit.png)
-["Sample tweet from tablet view"](Docs/sample tweets.png)
+!["A screenshot of the Desktop screen size supporting sizes above 1024px"](Docs/Desktop-screen-sized view.png)
+!["Error message screen for input limit"](Docs/Error-message screen for exceeding input limit.png)
+!["Sample tweet from tablet view"](Docs/sample tweets.png)
