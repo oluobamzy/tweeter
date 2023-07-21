@@ -1,44 +1,51 @@
-article{
-  display:flex;
+article {
+  display: flex;
   flex-direction: column;
   margin-top: 60px;
-  border:4px solid black;
-  transition: box-shadow 0.3s ease-in-out;
+  /* border:4px solid black; */
+  /* transition: box-shadow 0.3s ease-in-out; */
   overflow: hidden;
   word-wrap: break-word;
 }
-article:hover{
-  box-shadow: 0 5px 10px rgba(236, 9, 9, 0.5);
+
+article:hover {
+  box-shadow: 0 0 10px 0 rgba(236, 9, 9, 0.5);
 }
-.tweets-header{
-  display:flex;
+
+.tweets-header {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 20px auto;
-  
+
 }
-.profile-area{
+
+.profile-area {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
 }
-.profile-area p{
+
+.profile-area p {
   margin-right: 40px;
 }
-.display-text{
+
+.display-text {
   font-family: sans-serif;
   font-weight: 700;
-  text-align:start;
+  text-align: start;
   margin-left: 50px;
 }
+
 .line {
   display: inline-block;
   width: 96%;
   border-top: 5px solid rgb(9, 8, 8);
   margin: auto;
 }
-.tweets-footer{
+
+.tweets-footer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,13 +54,17 @@ article:hover{
   font-size: small;
   margin: 0 40px auto;
 }
-.fa-solid{
-  color:#4056A1;
+
+.fa-solid {
+  color: #4056A1;
 
 }
+
 .hover-effect {
-  color:#4056A1;  /* Initial color */
+  color: #4056A1;
+  /* Initial color */
 }
+
 .fa-solid:hover {
   color: rgba(197, 229, 14, 0.999);
   /* Color on hover */

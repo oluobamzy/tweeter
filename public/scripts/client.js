@@ -6,10 +6,9 @@
 $(function() {
   const renderTweets = (tweets) => {
     const $tweetsContainer = $('#loaded-articles');
-
     tweets.forEach((tweetData) => {
-        const $tweetElement = createTweetElement(tweetData);
-        $tweetsContainer.prepend($tweetElement);
+      const $tweetElement = createTweetElement(tweetData);
+      $tweetsContainer.prepend($tweetElement);
     });
   };
 
@@ -33,44 +32,40 @@ $(function() {
         </div>
       </footer>
     </article>`);
-  
+
     return tweet;
   };
-  
+
   // Function to escape HTML entities
-  function escapeHTML(html) {
+  function escapeHTML(html) {//This is to implement cross site scripting xss
     return $('<div>').text(html).html();
   }
-  
 
-  $("#myform").on('submit',function(event){
+
+  $("#myform").on('submit', function(event) {
     event.preventDefault();
-   // console.log(this);
-    
     const formData = $(this).serialize();
     let $counter = parseInt($('.counter').text());
     if ($counter < 0) {
       $(".error-message").slideDown();
       return false; // Prevent form submission if count is negative.
     }
-    
+
     if ($counter === 140) {
       $(".error-message").slideDown();
       return false; // Prevent form submission if count is exactly 140.
     }
 
     $.ajax({
-      url: '/tweets', 
+      url: '/tweets',
       type: 'POST',
       data: formData,
       success: function(response) {
-        // Handle the server response here
         console.log(response);
         $(".error-message").slideUp();
         loadTweets();
       },
       error: function(error) {
-        // Handle errors here
         console.error(error);
         $(".error-message").slideUp();
       }
@@ -78,27 +73,22 @@ $(function() {
   });
 
 
-  const loadTweets = ()=>{
+  const loadTweets = () => {
     const url = "/tweets";
-
-   $.ajax({
-    url: url,
-    type: "GET",
-    success: function(response){
-      //handle response
-      renderTweets(response);
-      $('#myform')[0].reset();
-    },
-    error: function(xhr,status,error){
+    $.ajax({
+      url: url,
+      type: "GET",
+      success: function(response) {
+        renderTweets(response);
+        $('#myform')[0].reset();
+      },
+      error: function(xhr, status, error) {
         console.log(error);
-    }
-
-
-   })
-  
-  }
+      }
+    });
+  };
   loadTweets();
-  
+
 })
 
 

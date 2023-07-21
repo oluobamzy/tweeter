@@ -1,20 +1,22 @@
-.site-header{
-  
-  height:520px;
-  width:100%;
-  display:flex;
+.site-header {
+
+  height: 520px;
+  width: 100%;
+  display: flex;
   align-items: center;
   flex-direction: column;
   background-color: rgb(179, 112, 23);
   /* background-image:url('../images/3px-tile.png'); */
   background-image: url('../images/nnnoise\ \(2\).svg');
 }
-.site-header img{
+
+.site-header img {
   max-width: 100%;
-  padding:140px 0 0 0;
+  padding: 140px 0 0 0;
 }
-.site-header h2{
+
+.site-header h2 {
   font-weight: bolder;
-  color:beige;
+  color: beige;
   font-family: 'Bungee', sans-serif;
 }

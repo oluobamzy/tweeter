@@ -5,36 +5,34 @@
  */
 html {
   box-sizing: border-box;
+  margin: 0;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-html{
-  margin: 0;
-}
 body {
   color: #545149;
   background-color: #ebe3d8;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
-  margin:0;
-  
-  
+  margin: 0;
+
 }
-main{
-  width:90vw;
-  height:500px;
-  color:#545149;
+
+main {
+  width: 90vw;
+  height: 500px;
+  color: #545149;
   margin: 20px auto;
 }
 
 
 
- 
+
 
 
 

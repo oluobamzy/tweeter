@@ -50,35 +50,37 @@
     </div>
   </nav>
   <div class="large-screen">
-  <header class="site-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>AMY MASON</h2>
-    </div>
-  </header>
+    <header class="site-header">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>AMY MASON</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="post" id="myform">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="error-message">
-          Oops! Only 140 characters are allowed❌❌❌ and Empty input ❌allowed
-        </div>
-        <div class="bt-output">
-          <button type="submit" id="btn-submit">Tweet</button>
-          <div name="counter" class="counter" for="tweet-text">140</div>
-        </div>
-      </form>
-      <article id="loaded-articles"></article>
-    </section>
-  </main>
-</div>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="post" id="myform">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="error-message">
+            Oops! Only 140 characters are allowed❌❌❌ and Empty input ❌allowed
+          </div>
+          <div class="bt-output">
+            <button type="submit" id="btn-submit">Tweet</button>
+            <div name="counter" class="counter" for="tweet-text">140</div>
+          </div>
+        </form>
+
+        <article id="loaded-articles"></article>
+
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
