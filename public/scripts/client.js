@@ -6,10 +6,12 @@
 $(function() {
   const renderTweets = (tweets) => {
     const $tweetsContainer = $('#loaded-articles');
-    tweets.forEach((tweetData) => {
-      const $tweetElement = createTweetElement(tweetData);
-      $tweetsContainer.prepend($tweetElement);
-    });
+    if (Array.isArray(tweets)) {
+      tweets.forEach((tweetData) => {
+        const $tweetElement = createTweetElement(tweetData);
+        $tweetsContainer.prepend($tweetElement);
+      });
+    }
   };
 
   const createTweetElement = (obj) => {
@@ -61,9 +63,12 @@ $(function() {
       type: 'POST',
       data: formData,
       success: function(response) {
-        console.log(response);
+        $('#tweet-text').val('');
+        $(".counter").text(140);
         $(".error-message").slideUp();
+        $('#loaded-articles').empty();
         loadTweets();
+
       },
       error: function(error) {
         console.error(error);
@@ -72,7 +77,6 @@ $(function() {
     });
   });
 
-
   const loadTweets = () => {
     const url = "/tweets";
     $.ajax({
@@ -80,7 +84,6 @@ $(function() {
       type: "GET",
       success: function(response) {
         renderTweets(response);
-        $('#myform')[0].reset();
       },
       error: function(xhr, status, error) {
         console.log(error);
