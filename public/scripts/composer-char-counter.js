@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // console.log("I AM READY TO ACCEPT INPUT");
   $('#tweet-text').on('input', function(event) {
     const changingLength = $(this).val().length;
     const maxLength = 140;
@@ -13,6 +12,4 @@ $(document).ready(function() {
     }
   });
   $(".fa-solid").addClass('hover-effect');
-  // $('article').addClass('hover-effect-article');
-
 });

@@ -46,8 +46,12 @@ $(function() {
 
   $("#myform").on('submit', function(event) {
     event.preventDefault();
-    const formData = $(this).serialize();
+    const tweetContent = $('#tweet-text').val().trim();
     let $counter = parseInt($('.counter').text());
+    if (tweetContent === "") {
+      $(".error-message").slideDown();
+      return false;
+    }
     if ($counter < 0) {
       $(".error-message").slideDown();
       return false; // Prevent form submission if count is negative.
@@ -57,7 +61,7 @@ $(function() {
       $(".error-message").slideDown();
       return false; // Prevent form submission if count is exactly 140.
     }
-
+    const formData = $(this).serialize();
     $.ajax({
       url: '/tweets',
       type: 'POST',
